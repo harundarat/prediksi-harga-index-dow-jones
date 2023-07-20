@@ -18,15 +18,14 @@ fig.update_layout(title="Chart Index Dow Jones (^DJI)",
                   xaxis_title="Date",
                   yaxis_title="Price")
 
+st.title("Prediksi Index Harga Dow Jones")
+
 st.plotly_chart(fig)
 
 preddji = joblib.load('preddji_joblib')
 
 tanggal = st.date_input("Masukkan Tanggal")
 inputantanggal = tanggal
-
-# # Mengubah format tanggal menjadi array 2 dimensi
-# tanggal = [[int(tanggal.replace("-",""))]]
 
 tanggal = tanggal.strftime("%Y%m%d")
 
@@ -38,5 +37,5 @@ tanggal = [[int(tanggal)]]
 y_pred = preddji.predict(tanggal)
 
 # Menampilkan hasil prediksi
-st.write(f"Prediksi harga Dow Jones pada tanggla {inputantanggal}, adalah {y_pred[0]}")
+st.write(f"Prediksi harga Dow Jones pada tanggal {inputantanggal}, adalah {y_pred[0]}")
 
