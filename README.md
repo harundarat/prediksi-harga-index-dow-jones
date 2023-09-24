@@ -1,1 +1,2 @@
-Program prediksi harga index dow jones dengan simple linear regression
+### Note:
+- pengambilan data harga masih manual.
