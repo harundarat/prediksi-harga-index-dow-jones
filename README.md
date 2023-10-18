@@ -1,2 +1,2 @@
 ### Note:
-- pengambilan data harga masih manual.
+- Variabel tanggal untuk pengambilan harga masih manual.
